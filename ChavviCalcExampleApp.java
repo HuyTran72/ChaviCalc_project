@@ -26,33 +26,34 @@ public class ChavviCalcExampleApp {
         String command = input.nextLine();
 
         // Quit the program
-if (command.equals("q")) {
-System.out.println("Thank for using Chavvi Calc");
-break;
-}
-switch (command){
-case "a":
-System.out.printf("Enter a number: ");
-String number = input.nextLine();
-//check if the number is validation
-if (numberValidation(number)) {numberA = Float.parseFloat(number);
-addValue(numberA, numberB);
-} else {
-System.out.println("Error: Unknow command");
-addValue(numberA, numberB);
-}
-break;
-case "b":
-System.out.printf("Enter a number: ");
-number = input.nextLine();
-//check if the number is validation
-if (numberValidation(number)){
-numberB = Float.parseFloat(number);
-addValue(numberA, numberB);
-}else{
-System.out.println("Error: Unknow command");
-addValue(numberA, numberB);
-}
+        if (command.equals("q")) {
+            System.out.println("Thank for using Chavvi Calc");
+            break;
+        }
+        switch (command){
+            case "a":
+                System.out.printf("Enter a number: ");
+                String number = input.nextLine();
+                
+        //check if the number is validation
+        if (numberValidation(number)) {numberA = Float.parseFloat(number);
+        addValue(numberA, numberB);
+        } else {
+        System.out.println("Error: Unknow command");
+        addValue(numberA, numberB);
+        }
+        break;
+        case "b":
+        System.out.printf("Enter a number: ");
+        number = input.nextLine();
+        //check if the number is validation
+        if (numberValidation(number)){
+        numberB = Float.parseFloat(number);
+        addValue(numberA, numberB);
+        }else{
+        System.out.println("Error: Unknow command");
+        addValue(numberA, numberB);
+        }
 break;
 case "+":
 numberA = numberA + numberB;
