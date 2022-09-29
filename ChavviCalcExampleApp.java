@@ -15,72 +15,64 @@ import java.util.*;
 public class ChavviCalcExampleApp {
 
   public static void main(String[] args) {
-    Scanner scan = new Scanner(System.in);
-    Character command = '_';
 
-    // loop until user quits
-    while (command != 'q') {
-      printMenu();
-      System.out.print("Enter a command: ");
-      command = menuGetCommand(scan);
+    float numberA = 0;
+    float numberB = 0;
 
-      executeCommand(scan, command);
-    }
+    addValue(numberA, numberB);
 
-    scan.close();
-  }
+    while(true){
+        Scanner input = new Scanner(System.in);
+        String command = input.nextLine();
 
-  //
-  // menu functions
-  //
-  private static void printMenuLine() {
-    System.out.println(
-      "----------------------------------------------------------"
-    );
-  }
-
-  private static void printMenuCommand(Character command, String desc) {
-    System.out.printf("%s\t%s\n", command, desc);
-  }
-
-  // prints the menu
-  public static void printMenu() {
-    printMenuLine();
-    System.out.println("ChavviCalc");
-    printMenuLine();
-
-    printMenuCommand('q', "Quit");
-
-    printMenuLine();
-  }
-
-  // get first character from input
-  private static Character menuGetCommand(Scanner scan) {
-    Character command = '_';
-
-    String rawInput = scan.nextLine();
-
-    if (rawInput.length() > 0) {
-      rawInput = rawInput.toLowerCase();
-      command = rawInput.charAt(0);
-    }
-
-    return command;
-  }
-
-  // calculator functions
-  private static Boolean executeCommand(Scanner scan, Character command) {
-    Boolean success = true;
-
-    switch (command) {
-      case 'q':
-        System.out.println("Thank you for using Chavvi Calc");
-        break;
-      default:
-        System.out.println("ERROR: Unknown commmand");
-        success = false;
-    }
-
-    return success;
-  }
+        // Quit the program
+if (command.equals("q")) {
+System.out.println("Thank for using Chavvi Calc");
+break;
 }
+switch (command){
+case "a":
+System.out.printf("Enter a number: ");
+String number = input.nextLine();
+//check if the number is validation
+if (numberValidation(number)) {numberA = Float.parseFloat(number);
+addValue(numberA, numberB);
+} else {
+System.out.println("Error: Unknow command");
+addValue(numberA, numberB);
+}
+break;
+case "b":
+System.out.printf("Enter a number: ");
+number = input.nextLine();
+//check if the number is validation
+if (numberValidation(number)){
+numberB = Float.parseFloat(number);
+addValue(numberA, numberB);
+}else{
+System.out.println("Error: Unknow command");
+addValue(numberA, numberB);
+}
+break;
+case "+":
+numberA = numberA + numberB;
+addValue(numberA, numberB);
+break;
+case "-":
+numberA = numberA - numberB;
+addValue(numberA, numberB);
+break;
+case "*":
+numberA = numberA * numberB;
+addValue(numberA, numberB);
+break;
+case "/":
+if (numberB == 0){
+System.out.println("Error: Unable to divide by 0");
+addValue(numberA, numberB);
+}else{
+numberA = numberA / numberB;
+addValue(numberA, numberB);
+}
+break;
+case "c":
