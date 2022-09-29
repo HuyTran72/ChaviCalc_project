@@ -1,3 +1,10 @@
+/*
+Name: Huy Tran
+Student ID: 1011887
+Class: CIS 055
+Date: 09/29/2022
+*/
+
 package com.chavviCalcExample;
 
 import java.util.*;
