@@ -107,7 +107,7 @@ private static void addValue(float a, float b){
         System.out.println(value);
         System.out.println("----------------------------------------");
         System.out.println("a Enter a value for A");
-        System.out.println("b Enter b value for B");
+        System.out.println("b Enter a value for B");
         System.out.println("+ Add");
         System.out.println("- Subtract");
         System.out.println("* Multiply");
