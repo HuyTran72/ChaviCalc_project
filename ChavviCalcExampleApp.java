@@ -34,16 +34,17 @@ public class ChavviCalcExampleApp {
             case "a":
                 System.out.printf("Enter a number: ");
                 String number = input.nextLine();
-                
+
         //check if the number is validation
-        if (numberValidation(number)) {numberA = Float.parseFloat(number);
-        addValue(numberA, numberB);
-        } else {
-        System.out.println("Error: Unknow command");
-        addValue(numberA, numberB);
-        }
-        break;
-        case "b":
+                if (numberValidation(number)) {
+                    numberA = Float.parseFloat(number);
+                    addValue(numberA, numberB);
+                } else {
+                    System.out.println("Error: Unknow command");
+                    addValue(numberA, numberB);
+                }
+                break;
+            case "b":
         System.out.printf("Enter a number: ");
         number = input.nextLine();
         //check if the number is validation
