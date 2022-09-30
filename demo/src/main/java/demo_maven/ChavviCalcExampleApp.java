@@ -5,7 +5,7 @@ Class: CIS 055
 Date: 09/29/2022
 */
 
-package com.chavviCalcExample;
+package ChavviCalcExample;
 
 import java.util.*;
 
